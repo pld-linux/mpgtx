@@ -2,11 +2,10 @@
 # NOTE: it won't build with -O3
 
 # TODO:
-# - polish description
 # - make proper man symlinks
 
 Summary:	MPeG ToolboX
-Summary(pl):	MPeG ToolboX
+Summary(pl):	MPeG ToolboX - narzêdzia do plików MPEG
 Name:		mpgtx
 Version:	1.3
 Release:	1
@@ -22,22 +21,31 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 mpgtx allows you to split, join, demultiplex, manipulate ID3 tags and
 fetch detailed information about a variety of MPEG files. mpgtx was
 designed with the good old Unix philosophy in mind: 'do little, but do
-it well, and provide the end user with an austary yet powerfull
+it well, and provide the end user with an austere yet powerful
 command line interface.'
 
 %description -l pl
+mpgtx umo¿liwia dzielenie, ³±czenie, usuwanie przeplotu, modyfikowanie
+znaczników ID3 oraz pobieranie szczegó³owych informacji o ró¿nych
+plikach MPEG. mpgtx zosta³ zaprojektowany zgodnie ze star± dobr±
+uniksow± filozofi±: "rób ma³o, ale rób to dobrze i udostêpnij
+u¿ytkownikowi prosty, ale potê¿ny interfejs linii poleceñ".
 
 %prep
 %setup -q
 
 %build
-./configure %{?with_debug:--parachute --devel}
-%{__make} CFLAGS="%{rpmcflags} -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DNOSIGNAL_H"
+./configure \
+	%{?with_debug:--parachute --devel}
+%{__make} \
+	CFLAGS="%{rpmcflags} -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DNOSIGNAL_H"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install PREFIX=$RPM_BUILD_ROOT%{_exec_prefix} manprefix=$RPM_BUILD_ROOT%{_prefix}/share
+%{__make} install \
+	PREFIX=$RPM_BUILD_ROOT%{_exec_prefix} \
+	manprefix=$RPM_BUILD_ROOT%{_prefix}/share
 
 %clean
 rm -rf $RPM_BUILD_ROOT
