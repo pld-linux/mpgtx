@@ -1,9 +1,6 @@
 
 # NOTE: it won't build with -O3
 
-# TODO:
-# - make proper man symlinks
-
 Summary:	MPeG ToolboX
 Summary(pl):	MPeG ToolboX - narzêdzia do plików MPEG
 Name:		mpgtx
@@ -46,6 +43,11 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	PREFIX=$RPM_BUILD_ROOT%{_exec_prefix} \
 	manprefix=$RPM_BUILD_ROOT%{_prefix}/share
+
+rm -f $RPM_BUILD_ROOT%{_mandir}/man1/mpg[!t]*
+for f in mpgcat mpgdemux mpginfo mpgjoin mpgsplit; do
+	echo '.so mpgtx.1' > $RPM_BUILD_ROOT%{_mandir}/man1/${f}.1
+done
 
 %clean
 rm -rf $RPM_BUILD_ROOT
