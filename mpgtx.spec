@@ -2,7 +2,7 @@
 # NOTE: it won't build with -O3
 
 Summary:	MPeG ToolboX
-Summary(pl):	MPeG ToolboX - narzêdzia do plików MPEG
+Summary(pl.UTF-8):   MPeG ToolboX - narzÄ™dzia do plikÃ³w MPEG
 Name:		mpgtx
 Version:	1.3
 Release:	1
@@ -21,12 +21,12 @@ designed with the good old Unix philosophy in mind: 'do little, but do
 it well, and provide the end user with an austere yet powerful
 command line interface.'
 
-%description -l pl
-mpgtx umo¿liwia dzielenie, ³±czenie, usuwanie przeplotu, modyfikowanie
-znaczników ID3 oraz pobieranie szczegó³owych informacji o ró¿nych
-plikach MPEG. mpgtx zosta³ zaprojektowany zgodnie ze star± dobr±
-uniksow± filozofi±: "rób ma³o, ale rób to dobrze i udostêpnij
-u¿ytkownikowi prosty, ale potê¿ny interfejs linii poleceñ".
+%description -l pl.UTF-8
+mpgtx umoÅ¼liwia dzielenie, Å‚Ä…czenie, usuwanie przeplotu, modyfikowanie
+znacznikÃ³w ID3 oraz pobieranie szczegÃ³Å‚owych informacji o rÃ³Å¼nych
+plikach MPEG. mpgtx zostaÅ‚ zaprojektowany zgodnie ze starÄ… dobrÄ…
+uniksowÄ… filozofiÄ…: "rÃ³b maÅ‚o, ale rÃ³b to dobrze i udostÄ™pnij
+uÅ¼ytkownikowi prosty, ale potÄ™Å¼ny interfejs linii poleceÅ„".
 
 %prep
 %setup -q
