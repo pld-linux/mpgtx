@@ -2,7 +2,7 @@
 # NOTE: it won't build with -O3
 
 Summary:	MPeG ToolboX
-Summary(pl.UTF-8):   MPeG ToolboX - narzędzia do plików MPEG
+Summary(pl.UTF-8):	MPeG ToolboX - narzędzia do plików MPEG
 Name:		mpgtx
 Version:	1.3
 Release:	1
