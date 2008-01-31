@@ -4,12 +4,12 @@
 Summary:	MPeG ToolboX
 Summary(pl.UTF-8):	MPeG ToolboX - narzędzia do plików MPEG
 Name:		mpgtx
-Version:	1.3
+Version:	1.3.1
 Release:	1
 License:	GPL
 Group:		Applications/Multimedia
-Source0:	http://dl.sourceforge.net/mpgtx/%{name}-%{version}.tgz
-# Source0-md5:	209a25eb7563ad4c4eb2948c783f123a
+Source0:	http://dl.sourceforge.net/mpgtx/%{name}-%{version}.tar.gz
+# Source0-md5:	d628060aa04ad3b40a175bf35f5167cf
 URL:		http://mpgtx.sourceforge.net/
 BuildRequires:	libstdc++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
